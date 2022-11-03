@@ -11,10 +11,10 @@
     <section>
       <?php include("navbar.php"); ?>
       <h1>Editar Produto</h1>
-      <form action="post">
+      <form action="cad-edti-product.php" method="POST">
         Nome do produto: <input type="text"><br>
         codBarras: <input type="text"><br>
-        Quantidade: <input type="text">
+        Quantidade: <input type="text"><br>
         <input type="submit" name="Alterar">
       </form>
 
