@@ -1,3 +1,10 @@
+<?php 
+  include("conection.php");
+
+  $query = "SELECT * from products";
+  $result = mysqli_query($conn, $query);
+  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,21 +19,27 @@
       <?php include("navbar.php"); ?>
       <h1>Tela Inicial</h1>
       <table>
-        <tbody>
+        <thead>
           <tr>
             <th>Nome</th>
             <th>Quantidade</th>
-            <th>codBarras</th>
+            <th>Código de barras</th>
+            <th>Editar</th>
+            <th>Apagar</th>
           </tr>
-          <tr>
-            <td>Produto 01</td>
-            <td>quant 01</td>
-            <td>Cod 01</td>
-          </tr><tr>
-            <td>Produto 02</td>
-            <td>quant 02</td>
-            <td>Cod 02</td>
-          </tr>
+        </thead>
+        <tbody>
+        <?php
+          while($row = mysqli_fetch_array($result)){
+            echo '<tr>
+              <td>'.$row['name'].'</td>
+              <td>'.$row['quantity'].'</td>
+              <td>'.$row['barcode'].'</td>
+              <td><a href="edit-product.php?id='.$row['id'].'"><img src="./img/editSmall.png"></a></td>
+              <td><a href="del-product.php?id='.$row['id'].'"><img src="./img/deleteSmall.png"></a></td>
+            </tr>';
+          }
+        ?>
         </tbody>
       </table>
 
