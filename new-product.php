@@ -11,11 +11,11 @@
     <section>
       <?php include("navbar.php"); ?>
       <h1>Novo Produto</h1>
-      <form action="cad-new-product.php" method="POST">
+      <form action="send-new-product.php" method="POST">
         Nome do produto: <input type="text" name="name"><br>
-        codBarras: <input type="text" name="codBarras"><br>
+        Código de barras: <input type="text" name="barcode"><br>
         Quantidade: <input type="text" name="quantity"><br>
-        <input type="submit" name="Cadastrar">
+        <input type="submit" name="cadastrar" value="Cadastrar">
       </form>
 
     </section>

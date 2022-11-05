@@ -4,10 +4,10 @@
   $db = mysqli_select_db($conn, 'crud_db');
 
   $name = $_POST['name'];
-  $codBarras = $_POST['codBarras'];
+  $barcode = $_POST['barcode'];
   $quantity = $_POST['quantity'];
 
-  $query = "INSERT INTO products (name,quantity,barcode) VALUES ('$name','$quantity','codBarras')";
+  $query = "INSERT INTO products (name,quantity,barcode) VALUES ('$name','$quantity','$barcode')";
   $insert = mysqli_query($conn, $query);
 
   if($insert){
