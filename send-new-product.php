@@ -1,8 +1,6 @@
 <?php 
   include("conection.php");
 
-  $db = mysqli_select_db($conn, 'crud_db');
-
   $name = $_POST['name'];
   $barcode = $_POST['barcode'];
   $quantity = $_POST['quantity'];

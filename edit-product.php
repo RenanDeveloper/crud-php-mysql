@@ -1,3 +1,13 @@
+<?php 
+  include("conection.php");
+
+  $id = $_GET['id'];
+
+  $query = "SELECT * from products WHERE id='$id'";
+  $result = mysqli_query($conn, $query);
+  $row = mysqli_fetch_array($result);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,9 +22,10 @@
       <?php include("navbar.php"); ?>
       <h1>Editar Produto</h1>
       <form action="send-edit-product.php" method="POST">
-        Nome do produto: <input type="text"><br>
-        codBarras: <input type="text"><br>
-        Quantidade: <input type="text"><br>
+        <input type="int" name="id" value="<?php echo $id; ?>" hidden>
+        Nome do produto: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
+        Código de barras: <input type="text" name="barcode" value="<?php echo $row['barcode']; ?>"><br>
+        Quantidade: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
         <input type="submit" name="alterar" value="Alterar">
       </form>
 
