@@ -12,13 +12,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <script>
+    function darBaixa(){
+      codigo = document.getElementById('baixa').value;
+      
+      if(codigo.length < 4){
+        alert ('Código menor que 4 caracteres');
+      }else{
+        document.getElementById('baixar').click();
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="container">
-    <section>
+    <main>
       <?php include("navbar.php"); ?>
       <h1>Tela Inicial</h1>
-      <table>
+      <div>
+        <form action="redux.php" method="GET">
+          Código de barras para baixa de produto: <input type="text" id="baixa" name="baixa" onchange="darBaixa()" autofocus></div><br>
+          <input type="submit" id="baixar" value="Dar baixa" hidden>
+        </form> 
+        <table>
         <thead>
           <tr>
             <th>Nome</th>
@@ -42,8 +58,7 @@
         ?>
         </tbody>
       </table>
-
-    </section>
+    </main>
   </div>
 </body>
 </html>
