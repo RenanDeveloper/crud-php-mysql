@@ -14,13 +14,7 @@
   <title>Estoque</title>
   <script>
     function darBaixa(){
-      codigo = document.getElementById('baixa').value;
-      
-      if(codigo.length < 4){
-        alert ('Código menor que 4 caracteres');
-      }else{
-        document.getElementById('baixar').click();
-      }
+      document.getElementById('baixar').click();
     }
   </script>
 </head>
