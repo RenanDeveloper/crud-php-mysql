@@ -14,7 +14,8 @@
       <form action="send-new-product.php" method="POST">
         Nome do produto: <input type="text" name="name"><br>
         Código de barras: <input type="text" name="barcode"><br>
-        Quantidade: <input type="text" name="quantity"><br>
+        Quantidade atual: <input type="text" name="quantity"><br>
+        Mínimo ideal: <input type="text" name="min_quantity" placeholder="quantidade"><br>
         <input type="submit" name="cadastrar" value="Cadastrar">
       </form>
 

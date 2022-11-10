@@ -4,8 +4,9 @@
   $name = $_POST['name'];
   $barcode = $_POST['barcode'];
   $quantity = $_POST['quantity'];
+  $min_quantity = $_POST['min_quantity'];
 
-  $query = "INSERT INTO products (name,quantity,barcode) VALUES ('$name','$quantity','$barcode')";
+  $query = "INSERT INTO products (name,barcode,quantity,min_quantity) VALUES ('$name','$barcode','$quantity','$min_quantity')";
   $insert = mysqli_query($conn, $query);
 
   if($insert){

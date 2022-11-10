@@ -26,6 +26,7 @@
         Nome do produto: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
         Código de barras: <input type="text" name="barcode" value="<?php echo $row['barcode']; ?>"><br>
         Quantidade: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
+        Mínimo ideal: <input type="text" name="min_quantity" placeholder="quantidade" value="<?php echo $row['min_quantity']; ?>"><br>
         <input type="submit" name="alterar" value="Alterar">
       </form>
 
