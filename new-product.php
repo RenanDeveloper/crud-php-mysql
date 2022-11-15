@@ -12,13 +12,13 @@
       <?php include("navbar.php"); ?>
       <h1>Novo Produto</h1>
       <form action="send-new-product.php" method="POST">
-        Nome do produto: <input type="text" name="name"><br>
-        Código de barras: <input type="text" name="barcode"><br>
-        Quantidade atual: <input type="text" name="quantity"><br>
-        Mínimo ideal: <input type="text" name="min_quantity" placeholder="quantidade"><br>
+        <label for="name">Nome do produto: <input type="text" id="name" name="name"></label><br>
+        <label for="barcode">Código de barras: <input type="text" id="barcode" name="barcode"><br>
+        <label for="quantity">Quantidade atual: <input type="text" id="quantity" name="quantity"><br>
+        <label for="min_quantity">Mínimo ideal: <input type="text" id="min_quantity" name="min_quantity" placeholder="quantidade"><br>
+        <label for="price">Preço: <input type="number" step="0.01" id="price" name="price"><br>
         <input type="submit" name="cadastrar" value="Cadastrar">
       </form>
-
     </section>
   </div>
 </body>
