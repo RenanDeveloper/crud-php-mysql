@@ -33,6 +33,7 @@
           <tr>
             <th>Nome</th>
             <th>Quantidade</th>
+            <th>Preço</th>
             <th>Código de barras</th>
             <th>Editar</th>
             <th>Apagar</th>
@@ -41,9 +42,17 @@
         <tbody>
         <?php
           while($row = mysqli_fetch_array($result)){
-            echo '<tr>
+            if($row['quantity'] > $row['min_quantity']){
+              echo '<tr>';
+            }else if($row['quantity'] == $row['min_quantity']){
+              echo '<tr style="Background-color: orange">';
+            }else{
+              echo '<tr style="Background-color: red">';
+            }
+            echo '
               <td>'.$row['name'].'</td>
               <td>'.$row['quantity'].'</td>
+              <td>'.$row['price'].'</td>
               <td>'.$row['barcode'].'</td>
               <td><a href="edit-product.php?id='.$row['id'].'"><img src="./img/editSmall.png"></a></td>
               <td><a href="del-product.php?id='.$row['id'].'"><img src="./img/deleteSmall.png"></a></td>
