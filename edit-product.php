@@ -1,12 +1,10 @@
 <?php 
-  include("conection.php");
-
-  $id = $_GET['id'];
-
-  $query = "SELECT * from products WHERE id='$id'";
-  $result = mysqli_query($conn, $query);
-  $row = mysqli_fetch_array($result);
-
+include("validate.php");
+include("conection.php");
+$id = $_GET['id'];
+$query = "SELECT * from products WHERE id='$id'";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,9 +25,9 @@
         Código de barras: <input type="text" name="barcode" value="<?php echo $row['barcode']; ?>"><br>
         Quantidade: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
         Mínimo ideal: <input type="text" name="min_quantity" placeholder="quantidade" value="<?php echo $row['min_quantity']; ?>"><br>
+        Preço: <input type="number" step="0.01" name="price" value="<?php echo $row['price']; ?>"><br>
         <input type="submit" name="alterar" value="Alterar">
       </form>
-
     </section>
   </div>
 </body>
