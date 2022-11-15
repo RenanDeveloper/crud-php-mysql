@@ -23,7 +23,7 @@
           <input type="password" name="senha" required><br>
         </label>
         <br>
-        <input type="submit" name="enter">
+        <input type="submit" name="enter" value="Entrar">
       </form>
     </section>
   </div>
