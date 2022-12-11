@@ -1,7 +1,7 @@
 <?php 
   include("conection.php");
 
-  $query = "SELECT * from products";
+  $query = "SELECT * from tb_products";
   $result = mysqli_query($conn, $query);
   
 ?>
@@ -15,6 +15,13 @@
   <script>
     function darBaixa(){
       document.getElementById('baixar').click();
+    }
+
+    function verifyDel($id_del) {
+      let text = "Tem CERTEZA que quer APAGAR o item?";
+      if (confirm(text) == true) {
+        window.location.href="del-product.php?id="+$id_del;
+      }
     }
   </script>
 </head>
@@ -42,6 +49,7 @@
         <tbody>
         <?php
           while($row = mysqli_fetch_array($result)){
+            $id_del = $row['id'];
             if($row['quantity'] > $row['min_quantity']){
               echo '<tr>';
             }else if($row['quantity'] == $row['min_quantity']){
@@ -55,7 +63,7 @@
               <td>'.$row['price'].'</td>
               <td>'.$row['barcode'].'</td>
               <td><a href="edit-product.php?id='.$row['id'].'"><img src="./img/editSmall.png"></a></td>
-              <td><a href="del-product.php?id='.$row['id'].'"><img src="./img/deleteSmall.png"></a></td>
+              <td><button onclick="verifyDel('.$row['id'].')" ><img src="./img/deleteSmall.png"></button></td>
             </tr>';
           }
         ?>
