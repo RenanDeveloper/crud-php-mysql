@@ -2,7 +2,7 @@
 include("validate.php");
 include("conection.php");
 $id = $_GET['id'];
-$query = "SELECT * from products WHERE id='$id'";
+$query = "SELECT * from tb_products WHERE id='$id'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 ?>

@@ -8,7 +8,7 @@
   $min_quantity = $_POST['min_quantity'];
   $price = $_POST['price'];
 
-  $query = "UPDATE products SET name='$name', barcode='$barcode', quantity='$quantity', min_quantity='$min_quantity', price='$price' WHERE id='$id'";
+  $query = "UPDATE tb_products SET name='$name', barcode='$barcode', quantity='$quantity', min_quantity='$min_quantity', price='$price' WHERE id='$id'";
   $edit = mysqli_query($conn, $query);
 
   if($edit){

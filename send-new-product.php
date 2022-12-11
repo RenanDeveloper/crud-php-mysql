@@ -7,7 +7,7 @@
   $min_quantity = $_POST['min_quantity'];
   $price = $_POST['price'];
 
-  $query = "INSERT INTO products (name,barcode,quantity,min_quantity,price) VALUES ('$name','$barcode','$quantity','$min_quantity','$price')";
+  $query = "INSERT INTO tb_products (name,barcode,quantity,min_quantity,price) VALUES ('$name','$barcode','$quantity','$min_quantity','$price')";
   $insert = mysqli_query($conn, $query);
 
   if($insert){

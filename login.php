@@ -35,7 +35,7 @@ if(isset($_POST['cpf']) && isset($_POST['senha'])){
   $cpf = $conn->real_escape_string($_POST['cpf']);
   $senha = $conn->real_escape_string($_POST['senha']);
 
-  $query = "SELECT * FROM users WHERE cpf='$cpf' AND senha='$senha'";
+  $query = "SELECT * FROM tb_users WHERE cpf='$cpf' AND senha='$senha'";
   $result = $conn->query($query);
   $row = $result->num_rows;
 

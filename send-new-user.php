@@ -7,7 +7,7 @@
   $admin = $_POST['admin'];
 
 
-  $query = "INSERT INTO users (name,cpf,admin,senha) VALUES ('$name','$cpf','$admin','$senha')";
+  $query = "INSERT INTO tb_users (name,cpf,admin,senha) VALUES ('$name','$cpf','$admin','$senha')";
   $insert = mysqli_query($conn, $query);
 
   if($insert){

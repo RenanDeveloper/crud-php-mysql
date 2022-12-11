@@ -2,7 +2,7 @@
 include("conection.php");
 include("validate.php");
 $id = $_GET['id'];
-$query = "DELETE FROM products WHERE id='$id'";
+$query = "DELETE FROM tb_products WHERE id='$id'";
 $del = mysqli_query($conn, $query);
 if($del){
   echo"<script language='javascript' type='text/javascript'>
