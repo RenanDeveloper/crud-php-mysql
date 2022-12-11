@@ -6,7 +6,7 @@
         session_start();
         if(isset($_SESSION['id'])){
           if($_SESSION['admin']){
-            echo "<a href='new-user.php'>+Usuário</a>";
+            echo "<a href='new-user.php'>+Usuário</a><a href='report.php'>Relatório</a>";
           }
           echo "<a href='logout.php'>Sair</a>";
         }else{
