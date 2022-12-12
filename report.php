@@ -1,13 +1,25 @@
 <?php 
   include("conection.php");
-  if(isset($_POST['init_date'])){
-    $theDate = $_POST['init_date'];
-  }else{
-    $theDate = date("Y-m-d");
+  date_default_timezone_set('America/Sao_Paulo');
+  if(!empty($_POST)){
+    if($_POST['init_date'] != "" && $_POST['end_date'] != ""){
+      $theInitDate = $_POST['init_date'];
+      $theEndDate = $_POST['end_date'];
+      $query = "SELECT * from tb_products INNER JOIN tb_output ON tb_products.id = tb_output.id_product WHERE tb_output.date_output BETWEEN '$theInitDate' and '$theEndDate'";
+      $result = mysqli_query($conn, $query);
+    }else{
+      if($_POST['init_date'] != "" && $_POST['end_date'] == "" ){
+        $theDate = $_POST['init_date'];
+      }else if($_POST['init_date'] == "" && $_POST['end_date'] != ""){
+        $theDate = $_POST['end_date'];
+      }else if($_POST['init_date'] == "" && $_POST['end_date'] == ""){
+        $theDate = date("Y-m-d");
+      }
+      $query = "SELECT * from tb_products INNER JOIN tb_output ON tb_products.id = tb_output.id_product WHERE tb_output.date_output='$theDate'";
+      $result = mysqli_query($conn, $query);
+    }
   }
-  $query = "SELECT * from tb_products INNER JOIN tb_output ON tb_products.id = tb_output.id_product WHERE tb_output.date_output='$theDate'";
-  $result = mysqli_query($conn, $query);
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,21 +51,23 @@
         </thead>
         <tbody>
         <?php
-          while($row = mysqli_fetch_array($result)){
-            if($row['quantity'] > $row['min_quantity']){
-              echo '<tr>';
-            }else if($row['quantity'] == $row['min_quantity']){
-              echo '<tr style="Background-color: orange">';
-            }else{
-              echo '<tr style="Background-color: red">';
+          if(!empty($_POST)){
+            while($row = mysqli_fetch_array($result)){
+              if($row['quantity'] > $row['min_quantity']){
+                echo '<tr>';
+              }else if($row['quantity'] == $row['min_quantity']){
+                echo '<tr style="Background-color: orange">';
+              }else{
+                echo '<tr style="Background-color: red">';
+              }
+              echo '
+                <td>'.$row['name'].'</td>
+                <td>'.$row['quantity'].'</td>
+                <td>'.$row['price'].'</td>
+                <td>'.$row['barcode'].'</td>
+                <td>'.$row['quantity_output'].'</td>
+              </tr>';
             }
-            echo '
-              <td>'.$row['name'].'</td>
-              <td>'.$row['quantity'].'</td>
-              <td>'.$row['price'].'</td>
-              <td>'.$row['barcode'].'</td>
-              <td>'.$row['quantity_output'].'</td>
-            </tr>';
           }
         ?>
         </tbody>
