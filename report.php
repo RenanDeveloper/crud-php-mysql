@@ -35,17 +35,17 @@
       <?php include("navbar.php"); ?>
       <h1>Relatório</h1>
         <form action="" method="POST">
-         <label for="init_date">Data inicial: <input type="date" id="init_date" name="init_date"></label><br>
-         <label for="end_date">Data final: <input type="date" id="end_date" name="end_date"></label><br>
+         <label for="init_date">Data inicial:</label><br><input type="date" id="init_date" name="init_date"><br>
+         <label for="end_date">Data final:</label><br><input type="date" id="end_date" name="end_date"><br>
           <input type="submit" id="gerar" value="Gerar relatório">
         </form> 
         <table>
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Quantidade</th>
+            <th>Quant.</th>
             <th>Preço</th>
-            <th>Código de barras</th>
+            <th>Cod. barras</th>
             <th>Baixa</th>
           </tr>
         </thead>

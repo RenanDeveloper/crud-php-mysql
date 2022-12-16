@@ -21,11 +21,11 @@ $row = mysqli_fetch_array($result);
       <h1>Editar Produto</h1>
       <form action="send-edit-product.php" method="POST">
         <input type="int" name="id" value="<?php echo $id; ?>" hidden>
-        Nome do produto: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
-        Código de barras: <input type="text" name="barcode" value="<?php echo $row['barcode']; ?>"><br>
-        Quantidade: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
-        Mínimo ideal: <input type="text" name="min_quantity" placeholder="quantidade" value="<?php echo $row['min_quantity']; ?>"><br>
-        Preço: <input type="number" step="0.01" name="price" value="<?php echo $row['price']; ?>"><br>
+        <label for="name">Nome do produto:</label><br><input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"><br>
+        <label for="barcode">Código de barras:</label><br><input type="text" name="barcode" id="barcode" value="<?php echo $row['barcode']; ?>"><br>
+        <label for="quantity">Quantidade:</label><br><input type="text" name="quantity" id="quantity" value="<?php echo $row['quantity']; ?>"><br>
+        <label for="min_quantity">Mínimo ideal:</label><br><input type="text" name="min_quantity" id="min_quantity" placeholder="quantidade" value="<?php echo $row['min_quantity']; ?>"><br>
+        <label for="price">Preço:</label><br><input type="number" step="0.01" name="price" id="price" value="<?php echo $row['price']; ?>"><br>
         <input type="submit" name="alterar" value="Alterar">
       </form>
     </section>

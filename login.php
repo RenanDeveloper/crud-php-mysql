@@ -14,15 +14,8 @@
         <a href="new-product.php">+Produto</a>
       </nav>
       <form action="" method="POST">
-        <label for="cpf">
-          Login: <br>
-          <input type="text" name="cpf" id="cpf" placeholder="CPF" required><br>
-        </label>
-        <label for="senha">
-          Senha: <br>
-          <input type="password" name="senha" required><br>
-        </label>
-        <br>
+        <label for="cpf">Login:</label><br><input type="text" name="cpf" id="cpf" placeholder="CPF" required><br>
+        <label for="senha">Senha:</label><br><input type="password" name="senha" id="senha" required><br>
         <input type="submit" name="enter" value="Entrar">
       </form>
     </section>

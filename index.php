@@ -32,16 +32,16 @@
       <h1>Tela Inicial</h1>
       <div>
         <form action="redux.php" method="GET">
-          Código de barras para baixa de produto: <input type="text" id="baixa" name="baixa" onchange="darBaixa()" autofocus></div><br>
+          <label for="baixa">Código de barras para baixa de produto:</label><br><input type="text" id="baixa" name="baixa" onchange="darBaixa()" autofocus></div><br>
           <input type="submit" id="baixar" value="Dar baixa" hidden>
         </form> 
         <table>
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Quantidade</th>
+            <th>Qnt.</th>
             <th>Preço</th>
-            <th>Código de barras</th>
+            <th>Cod. barras</th>
             <th>Editar</th>
             <th>Apagar</th>
           </tr>
