@@ -2,6 +2,16 @@
 include("conection.php");
 
 $barcode = $_GET['baixa'];
+//$id_user = $_GET['id_user'];
+//$quantity_output = $_GET['quantity_output'];
+
+$queryRow = "SELECT id FROM tb_products WHERE barcode='$barcode'";
+$queryRowResult = mysqli_query($conn, $queryRow);
+$rowResult = mysqli_fetch_assoc($queryRowResult);
+$id_product =  $rowResult['id'];
+//$queryInsertion = "INSERT INTO tb_output (id_product,id_user,quantity_output) VALUES ('$id_product','$id_user','$quantity_output')";
+$queryInsertion = "INSERT INTO tb_output (id_product) VALUES ('$id_product')";
+$insert = mysqli_query($conn, $queryInsertion);
 
 $query = "SELECT quantity FROM tb_products WHERE barcode='$barcode'";
 $result = mysqli_query($conn, $query);
