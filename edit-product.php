@@ -1,6 +1,6 @@
 <?php 
 include("validate.php");
-include("connection.php");
+include("connect.php");
 $id = $_GET['id'];
 $query = "SELECT * from tb_products WHERE id='$id'";
 $result = mysqli_query($conn, $query);

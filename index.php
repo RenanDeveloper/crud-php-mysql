@@ -1,5 +1,5 @@
 <?php 
-  include("connection.php");
+  include("connect.php");
 
   $query = "SELECT * from tb_products";
   $result = mysqli_query($conn, $query);

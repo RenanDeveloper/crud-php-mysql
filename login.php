@@ -23,7 +23,7 @@
 </body>
 </html>
 <?php
-include("conection.php");
+include("connect.php");
 if(isset($_POST['cpf']) && isset($_POST['senha'])){
   $cpf = $conn->real_escape_string($_POST['cpf']);
   $senha = $conn->real_escape_string($_POST['senha']);

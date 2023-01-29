@@ -1,7 +1,7 @@
 <?php 
   
   function decreaseQuantity($id_product, $id_user = $_SESSION['id'], $number_itens = 1) {
-    include ("connection.php");
+    include ("connect.php");
     
     $today = date("Y-m-d");
     $query = "SELECT * FROM tb_output WHERE id_product='$id_product' AND date_output='$today'";

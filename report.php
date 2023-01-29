@@ -1,5 +1,5 @@
 <?php 
-  include("connection.php");
+  include("connect.php");
   date_default_timezone_set('America/Sao_Paulo');
   if(!empty($_POST)){
     if($_POST['init_date'] != "" && $_POST['end_date'] != ""){
