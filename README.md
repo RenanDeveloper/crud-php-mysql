@@ -5,3 +5,18 @@ Gestor de estoque completo com cadastro, leitura, edição e deleção, além de
 Esse sistema servirá de base para outro mais robusto com possibilidade de cadastro e baixa através do leitor de códigos de barras.
 
 Após criar a base de dados com o arquivo crud_db.sql utilize o usuário Master com Login = 00011122233 e com senha = adminMaster para criar novos usuários. Somente usuários com privilégio Admin podem criar novos usuários, editar e apagar produtos, gerar relatórios e criar novos usuários. Os usuários sem privilégio Admin podem somente dar baixa de estoque através do código de barras.
+
+Crie o arquivo connect.php com as seguintes informações
+<?php
+$servername = "localhost";
+$username = "yourUserName";
+$password = "yourPassword";
+$db = "yourDataBase";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $db);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
