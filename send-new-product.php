@@ -1,5 +1,5 @@
 <?php 
-  include("conection.php");
+  include("connection.php");
 
   $name = $_POST['name'];
   $barcode = $_POST['barcode'];

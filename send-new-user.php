@@ -1,5 +1,5 @@
 <?php 
-  include("conection.php");
+  include("connection.php");
 
   $name = $_POST['name'];
   $cpf = $_POST['cpf'];

@@ -1,5 +1,5 @@
 <?php 
-include("conection.php");
+include("connection.php");
 include("validate.php");
 $id = $_GET['id'];
 $query = "DELETE FROM tb_products WHERE id='$id'";

@@ -1,5 +1,5 @@
 <?php 
-include("conection.php");
+include("connection.php");
 
 $barcode = $_GET['baixa'];
 //$id_user = $_GET['id_user'];
