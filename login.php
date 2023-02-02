@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="new-product.php">+Produto</a></li>
+    </ul>
+  </nav>
   <div class="container">
     <section>
-      <nav>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="new-product.php">+Produto</a></li>
-        </ul>
-      </nav>
       <form action="" method="POST">
         <label for="cpf">Login:</label><br><input type="text" name="cpf" id="cpf" placeholder="CPF" required><br>
         <label for="senha">Senha:</label><br><input type="password" name="senha" id="senha" required><br>

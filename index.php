@@ -29,9 +29,9 @@
   </script>
 </head>
 <body>
+  <?php include("navbar.php"); ?>
   <div class="container">
     <main>
-      <?php include("navbar.php"); ?>
       <h1>Tela Inicial</h1>
       <div>
         <form action="redux.php" method="GET">

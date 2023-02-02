@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <?php include("navbar.php"); ?>
   <div class="container">
     <section>
-      <?php include("navbar.php"); ?>
       <h1>Novo Produto</h1>
       <form action="send-new-product.php" method="POST">
         <label for="name">Nome do produto:</label><br><input type="text" id="name" name="name"><br>
@@ -18,7 +18,7 @@
         <label for="quantity">Quantidade atual:</label><br><input type="text" id="quantity" name="quantity"><br>
         <label for="min_quantity">Mínimo ideal:</label><br><input type="text" id="min_quantity" name="min_quantity" placeholder="quantidade"><br>
         <label for="price">Preço:</label><br><input type="number" step="0.01" id="price" name="price"><br>
-        <input type="submit" class="botao" name="cadastrar" value="Cadastrar">
+        <input type="submit" name="cadastrar" value="Cadastrar">
       </form>
     </section>
   </div>
