@@ -31,14 +31,16 @@ nav li a{
   margin: 10px;
   padding: 5px;
   text-decoration: none;
-  color: var(--cor-contraste);
+  color: black;
   font-weight: bold;
-
+  text-shadow: 2px 2px 2px white;
 }
 nav li a:hover{
   background-color: var(--cor-contraste);
-  color: var(--cor-principal);
+  color: white;
   border-radius: 5px;
+  text-shadow: 2px 2px 2px gold;
+
 }
 h1{
   color: var(--cor-principal);
@@ -94,3 +96,6 @@ input[type=submit]:hover{
   color: var(--cor-contraste);
 }
 .pointer {cursor: pointer;}
+a{
+  color: var(--cor-principal);
+}
