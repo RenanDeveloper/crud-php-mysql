@@ -1,7 +1,10 @@
-:root{--cor-principal: gold;}
+:root{
+  --cor-principal: gold;
+  --cor-contraste: black;
+}
 html{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: black;
+  background-color: var(--cor-contraste);
   color: white;
   box-sizing: border-box;
 }
@@ -24,7 +27,7 @@ nav li a{
 }
 nav li a:hover{
   background-color: var(--cor-principal);
-  color: black;
+  color: var(--cor-contraste);
   border-radius: 5px;
 }
 h1{
@@ -48,7 +51,7 @@ table td {
   height: 50%;
   }
 table thead{
-  background-color: black;
+  background-color: var(--cor-contraste);
   color: var(--cor-principal);
 }
 table tbody tr:nth-child(odd){
@@ -56,29 +59,28 @@ table tbody tr:nth-child(odd){
 }
 table tbody tr:hover{
   background-color: white;
-  color: black;
+  color: var(--cor-contraste);
 }
 table tbody tr:nth-child(odd):hover{
   background-color: white;
-  color: black;
+  color: var(--cor-contraste);
 }
 table td{
   padding: 0 5px;
 }
 
-.botao{
+input[type=submit]{
   border: 2px solid var(--cor-principal);
-  background-color: black;
+  background-color: var(--cor-contraste);
   color: var(--cor-principal);
-  
   width: 200px;
   height: 50px;
   border-radius: 50px;
   font-weight: bold;
   margin-top: 10px;
 }
-.botao:hover{
+input[type=submit]:hover{
   background-color: var(--cor-principal);
-  color: black;
+  color: var(--cor-contraste);
 }
 .pointer {cursor: pointer;}
