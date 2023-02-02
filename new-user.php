@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,7 @@
         <label for="senha">Senha:<br><input type="text" id="senha" name="senha"></label><br>
         Admin:<br><label for="admin">Sim</label><input type="radio" id="admin" name="admin" value="1">
         <label for="admin2">Não</label><input type="radio" id="admin2" name="admin" value="0" checked><br>
-        <input type="submit" name="cadastrar" value="Cadastrar">
+        <button class="botao" type="submit" name="cadastrar">Cadastrar</button>
       </form>
     </section>
   </div>

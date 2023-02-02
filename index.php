@@ -12,6 +12,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+
   <script>
     function darBaixa(){
       document.getElementById('baixar').click();
@@ -62,8 +65,8 @@
               <td>'.$row['quantity'].'</td>
               <td>'.$row['price'].'</td>
               <td>'.$row['barcode'].'</td>
-              <td><a href="edit-product.php?id='.$row['id'].'"><img src="./img/editSmall.png"></a></td>
-              <td><button onclick="verifyDel('.$row['id'].')" ><img src="./img/deleteSmall.png"></button></td>
+              <td style="text-align: center"><a href="edit-product.php?id='.$row['id'].'"><img src="./img/editSmall.png"></a></td>
+              <td style="text-align: center"><button class="pointer" onclick="verifyDel('.$row['id'].')" ><img src="./img/delete-512.svg" style="width: 25px" /></button></td>
             </tr>';
           }
         ?>

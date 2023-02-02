@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,7 @@
         <label for="quantity">Quantidade atual:</label><br><input type="text" id="quantity" name="quantity"><br>
         <label for="min_quantity">Mínimo ideal:</label><br><input type="text" id="min_quantity" name="min_quantity" placeholder="quantidade"><br>
         <label for="price">Preço:</label><br><input type="number" step="0.01" id="price" name="price"><br>
-        <input type="submit" name="cadastrar" value="Cadastrar">
+        <input type="submit" class="botao" name="cadastrar" value="Cadastrar">
       </form>
     </section>
   </div>

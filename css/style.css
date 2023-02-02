@@ -1,0 +1,84 @@
+:root{--cor-principal: gold;}
+html{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+.container{
+  width: 800px;
+  margin: 50px auto;
+}
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+nav li{
+}
+nav li a{
+  padding: 5px;
+  text-decoration: none;
+  color: var(--cor-principal);
+}
+nav li a:hover{
+  background-color: var(--cor-principal);
+  color: black;
+  border-radius: 5px;
+}
+h1{
+  color: var(--cor-principal);
+}
+input{
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 10px;
+  width: 250px;
+  margin: 10px 0 0 0;
+}
+#baixa:focus {
+  outline: none;
+  background-color: lightgray;
+}
+table td {
+  padding:18px;
+  border: 1px solid var(--cor-principal);
+  width: 33%;
+  height: 50%;
+  }
+table thead{
+  background-color: black;
+  color: var(--cor-principal);
+}
+table tbody tr:nth-child(odd){
+  background-color: rgba(255, 255, 255, .2);
+}
+table tbody tr:hover{
+  background-color: white;
+  color: black;
+}
+table tbody tr:nth-child(odd):hover{
+  background-color: white;
+  color: black;
+}
+table td{
+  padding: 0 5px;
+}
+
+.botao{
+  border: 2px solid var(--cor-principal);
+  background-color: black;
+  color: var(--cor-principal);
+  
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.botao:hover{
+  background-color: var(--cor-principal);
+  color: black;
+}
+.pointer {cursor: pointer;}

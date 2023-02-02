@@ -28,6 +28,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="container">
@@ -37,7 +38,7 @@
         <form action="" method="POST">
          <label for="init_date">Data inicial:</label><br><input type="date" id="init_date" name="init_date"><br>
          <label for="end_date">Data final:</label><br><input type="date" id="end_date" name="end_date"><br>
-          <input type="submit" id="gerar" value="Gerar relatório">
+          <input type="submit" class="botao" id="gerar" value="Gerar relatório">
         </form> 
         <table>
         <thead>
