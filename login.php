@@ -5,13 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="container">
     <section>
       <nav>
-        <a href="index.php">Home</a>
-        <a href="new-product.php">+Produto</a>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="new-product.php">+Produto</a></li>
+        </ul>
       </nav>
       <form action="" method="POST">
         <label for="cpf">Login:</label><br><input type="text" name="cpf" id="cpf" placeholder="CPF" required><br>
