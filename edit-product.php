@@ -13,11 +13,13 @@ $row = mysqli_fetch_array($result);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estoque</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <?php include("navbar.php"); ?>
   <div class="container">
     <section>
-      <?php include("navbar.php"); ?>
       <h1>Editar Produto</h1>
       <form action="send-edit-product.php" method="POST">
         <input type="int" name="id" value="<?php echo $id; ?>" hidden>
