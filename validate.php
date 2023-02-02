@@ -16,7 +16,7 @@
       session_start();
     }
     if(!isset($_SESSION['id'])){
-      die("Você não está logado.<p><a href='login.php'>Fazer login</a></p>");
+      die("<h1>Você não está logado.</h1><p><a href='login.php'>Fazer login</a></p>");
     }
     ?>
 </body>
